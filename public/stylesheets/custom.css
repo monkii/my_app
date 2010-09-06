@@ -1,5 +1,4 @@
-.3. CSS for the container, body, and links.
-public/stylesheets/default.css
+
 html, body {
 	height: 100%;
 }
@@ -7,8 +6,7 @@ html, body {
 body {
 	margin: 0px;
 	padding: 0px;
-	background: #FFFFFF repeat left top;
-    background-image:url(../images/bg01.jpg)
+	background: url(/images/bg01.jpg) repeat top left;
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 	font-size: 11px;
 	color: #797979;
@@ -56,7 +54,7 @@ ul.list1 {
 ul.list1 li {
 	height: 20px;
 	padding: 6px 0px 0px 15px;
-	background-image:url(..images/homepage14.jpg)
+	background-image: url(/images/homepage14.jpg)
 
 }
 
@@ -113,19 +111,19 @@ hr {
 /** BACKGROUNDS */
 
 #bg1 {
-	background: url(images/bg02.jpg) repeat-x left top;
+	background: url(/images/bg02.jpg) repeat-x left top;
 }
 
 #bg2 {
-	background: url(images/bg03.jpg) no-repeat center top;
+	background: url(/images/bg03.jpg) no-repeat center top;
 }
 
 #bg3 {
-	background: url(images/bg06.jpg) repeat-y center top;
+	background: url(/images/bg06.jpg) repeat-y center top;
 }
 
 #bg4 {
-	background: url(images/bg07.jpg) no-repeat center top;
+	background: url(/images/bg07.jpg) no-repeat center top;
 }
 
 #bg5 {
@@ -170,13 +168,13 @@ hr {
 
 #menu {
 	height: 57px;
-	background: url(images/bg04.jpg) no-repeat center top;
+	background: url(/images/bg04.jpg) no-repeat center top;
 }
 
 #menu ul {
 	height: 33px;
 	padding: 24px 0px 0px 0px;
-	background: url(images/bg1_01.jpg) no-repeat left top;
+	background: url(/images/bg1_01.jpg) no-repeat left top;
 	text-align: center;
 	line-height: normal;
 	list-style: none;
@@ -185,7 +183,7 @@ hr {
 #menu li {
 	display: inline;
 	padding: 0px 20px 0px 28px;
-	background: url(images/homepage02.gif) no-repeat left center;
+	background: url(/images/homepage02.gif) no-repeat left center;
 }
 
 #menu a {
@@ -205,20 +203,20 @@ hr {
 /** BAR */
 
 #bar {
-	background: url(images/bg05.jpg) no-repeat center top;
+	background: url(/images/bg05.jpg) no-repeat center top;
 }
 
 #bar .container {
 	height: 44px;
-	background: url(images/subpage1_01.jpg) no-repeat left top;
+	background: url(/images/subpage1_01.jpg) no-repeat left top;
 }
 
 .home #bar .container {
-	background-image: url(images/bg1_02.jpg);
+	background-image: url(/images/bg1_02.jpg);
 }
 
 .single #bar .container {
-	background-image: url(images/subpage2_01.jpg);
+	background-image: url(/images/subpage2_01.jpg);
 }
 
 #bar form {
@@ -236,7 +234,7 @@ hr {
 	width: 132px;
 	height: 22px;
 	padding: 2px 10px 0px 10px;
-	background: url(images/homepage03.jpg) no-repeat left top;
+	background: url(/images/homepage03.jpg) no-repeat left top;
 }
 
 #bar .input-text input {
@@ -251,7 +249,7 @@ hr {
 #bar .input-submit {
 	width: 54px;
 	padding: 5px 0px 6px 0px;
-	background: url(images/homepage04.jpg) no-repeat left top;
+	background: url(/images/homepage04.jpg) no-repeat left top;
 	border: none;
 	font-size: 10px;
 	font-weight: bold;
@@ -307,15 +305,15 @@ hr {
 /** PAGE */
 
 #page {
-	background: url(images/subpage1_02.jpg) repeat-y left top;
+	background: url(/images/subpage1_02.jpg) repeat-y left top;
 }
 
 .home #page {
-	background-image: url(images/bg1_03.jpg);
+	background-image: url(/images/bg1_03.jpg);
 }
 
 .single #page {
-	background-image: url(images/subpage2_02.jpg);
+	background-image: url(/images/subpage2_02.jpg);
 }
 
 /** CONTENT */
@@ -353,23 +351,23 @@ hr {
 /** FOOTER */
 
 #footer {
-	background: url(images/bg08.jpg) no-repeat center top;
+	background: url(/images/bg08.jpg) no-repeat center top;
 }
 
 #footer p {
 	padding: 60px 0px;
-	background: url(images/subpage1_03.jpg) no-repeat left top;
+	background: url(/images/subpage1_03.jpg) no-repeat left top;
 	text-align: center;
 	line-height: normal;
 	color: #70899D;
 }
 
 .home #footer p {
-	background-image: url(images/bg1_05.jpg);
+	background-image: url(/images/bg1_05.jpg);
 }
 
 .single #footer p {
-	background-image: url(images/subpage2_03.jpg);
+	background-image: url(/images/subpage2_03.jpg);
 }
 
 #footer .legal {
@@ -389,23 +387,23 @@ hr {
 }
 
 .box-style1 .title {
-	background: url(images/homepage13.jpg) no-repeat left top;
+	background: url(/images/homepage13.jpg) no-repeat left top;
 }
 
 .box-style2 .title {
-	background: url(images/homepage12.jpg) no-repeat left top;
+	background: url(/images/homepage12.jpg) no-repeat left top;
 }
 
 .box-style3 .title {
-	background: url(images/homepage16.jpg) no-repeat left top;
+	background: url(/images/homepage16.jpg) no-repeat left top;
 }
 
 .box-style4 .title {
-	background: url(images/homepage15.jpg) no-repeat left top;
+	background: url(/images/homepage15.jpg) no-repeat left top;
 }
 
 .box-style5 .title {
-	background: url(images/subpage2_04.jpg) no-repeat left top;
+	background: url(/images/subpage2_04.jpg) no-repeat left top;
 }
 
 /** BOX1 */
