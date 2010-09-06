@@ -1,239 +1,277 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Ruby on Rails: Welcome aboard</title>
-    <style type="text/css" media="screen">
-      body {
-        margin: 0;
-        margin-bottom: 25px;
-        padding: 0;
-        background-color: #f0f0f0;
-        font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
-        font-size: 13px;
-        color: #333;
-      }
-
-      h1 {
-        font-size: 28px;
-        color: #000;
-      }
-
-      a  {color: #03c}
-      a:hover {
-        background-color: #03c;
-        color: white;
-        text-decoration: none;
-      }
-
-
-      #page {
-        background-color: #f0f0f0;
-        width: 750px;
-        margin: 0;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      #content {
-        float: left;
-        background-color: white;
-        border: 3px solid #aaa;
-        border-top: none;
-        padding: 25px;
-        width: 500px;
-      }
-
-      #sidebar {
-        float: right;
-        width: 175px;
-      }
-
-      #footer {
-        clear: both;
-      }
-
-
-      #header, #about, #getting-started {
-        padding-left: 75px;
-        padding-right: 30px;
-      }
-
-
-      #header {
-        background-image: url("images/rails.png");
-        background-repeat: no-repeat;
-        background-position: top left;
-        height: 64px;
-      }
-      #header h1, #header h2 {margin: 0}
-      #header h2 {
-        color: #888;
-        font-weight: normal;
-        font-size: 16px;
-      }
-
-
-      #about h3 {
-        margin: 0;
-        margin-bottom: 10px;
-        font-size: 14px;
-      }
-
-      #about-content {
-        background-color: #ffd;
-        border: 1px solid #fc0;
-        margin-left: -55px;
-        margin-right: -10px;
-      }
-      #about-content table {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        font-size: 11px;
-        border-collapse: collapse;
-      }
-      #about-content td {
-        padding: 10px;
-        padding-top: 3px;
-        padding-bottom: 3px;
-      }
-      #about-content td.name  {color: #555}
-      #about-content td.value {color: #000}
-
-      #about-content ul {
-        padding: 0;
-        list-style-type: none;
-      }
-
-      #about-content.failure {
-        background-color: #fcc;
-        border: 1px solid #f00;
-      }
-      #about-content.failure p {
-        margin: 0;
-        padding: 10px;
-      }
-
-
-      #getting-started {
-        border-top: 1px solid #ccc;
-        margin-top: 25px;
-        padding-top: 15px;
-      }
-      #getting-started h1 {
-        margin: 0;
-        font-size: 20px;
-      }
-      #getting-started h2 {
-        margin: 0;
-        font-size: 14px;
-        font-weight: normal;
-        color: #333;
-        margin-bottom: 25px;
-      }
-      #getting-started ol {
-        margin-left: 0;
-        padding-left: 0;
-      }
-      #getting-started li {
-        font-size: 18px;
-        color: #888;
-        margin-bottom: 25px;
-      }
-      #getting-started li h2 {
-        margin: 0;
-        font-weight: normal;
-        font-size: 18px;
-        color: #333;
-      }
-      #getting-started li p {
-        color: #555;
-        font-size: 13px;
-      }
-
-
-      #sidebar ul {
-        margin-left: 0;
-        padding-left: 0;
-      }
-      #sidebar ul h3 {
-        margin-top: 25px;
-        font-size: 16px;
-        padding-bottom: 10px;
-        border-bottom: 1px solid #ccc;
-      }
-      #sidebar li {
-        list-style-type: none;
-      }
-      #sidebar ul.links li {
-        margin-bottom: 5px;
-      }
-
-    </style>
-    <script type="text/javascript">
-      function about() {
-        info = document.getElementById('about-content');
-        if (window.XMLHttpRequest)
-          { xhr = new XMLHttpRequest(); }
-        else
-          { xhr = new ActiveXObject("Microsoft.XMLHTTP"); }
-        xhr.open("GET","rails/info/properties",false);
-        xhr.send("");
-        info.innerHTML = xhr.responseText;
-        info.style.display = 'block'
-      }
-    </script>
-  </head>
-  <body>
-    <div id="page">
-      <div id="sidebar">
-        <ul id="sidebar-items">
-          <li>
-            <h3>Browse the documentation</h3>
-            <ul class="links">
-              <li><a href="http://api.rubyonrails.org/">Rails API</a></li>
-              <li><a href="http://stdlib.rubyonrails.org/">Ruby standard library</a></li>
-              <li><a href="http://corelib.rubyonrails.org/">Ruby core</a></li>
-              <li><a href="http://guides.rubyonrails.org/">Rails Guides</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-
-      <div id="content">
-        <div id="header">
-          <h1>Welcome aboard</h1>
-          <h2>You&rsquo;re riding Ruby on Rails!</h2>
-        </div>
-
-        <div id="about">
-          <h3><a href="rails/info/properties" onclick="about(); return false">About your application&rsquo;s environment</a></h3>
-          <div id="about-content" style="display: none"></div>
-        </div>
-
-        <div id="getting-started">
-          <h1>Getting started</h1>
-          <h2>Here&rsquo;s how to get rolling:</h2>
-
-          <ol>
-            <li>
-              <h2>Use <code>rails generate</code> to create your models and controllers</h2>
-              <p>To see all available options, run it without parameters.</p>
-            </li>
-
-            <li>
-              <h2>Set up a default route and remove or rename this file</h2>
-              <p>Routes are set up in config/routes.rb.</p>
-            </li>
-
-            <li>
-              <h2>Create your database</h2>
-              <p>Run <code>rake db:migrate</code> to create your database. If you're not using SQLite (the default), edit <code>config/database.yml</code> with your username and password.</p>
-            </li>
-          </ol>
-        </div>
-      </div>
-
-      <div id="footer">&nbsp;</div>
-    </div>
-  </body>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body class="home">
+<table width="100%" border="0" cellpadding="0" cellspacing="0" id="bg1">
+	<tr valign="top">
+		<td><table width="100" border="0" align="center" cellpadding="0" cellspacing="0">
+				<tr>
+					<td id="bg2"><table border="0" align="center" cellpadding="0" cellspacing="0" id="header">
+							<tr valign="top">
+								<td><img src="images/homepage01.jpg" alt="" width="500" height="147" /></td>
+								<td><div id="topmenu">
+										<ul>
+											<li class="first"><a href="#" accesskey="1" title="">Advanced Search</a></li>
+											<li><a href="#">Sitemap</a></li>
+											<li><a href="#">Help and Information</a></li>
+										</ul>
+									</div></td>
+							</tr>
+						</table></td>
+				</tr>
+			</table>
+			<table width="1058" border="0" align="center" cellpadding="0" cellspacing="0">
+				<tr>
+					<td id="menu"><ul class="container">
+							<li class="first"><a href="#">Home</a></li>
+							<li><a href="#">News</a></li>
+							<li><a href="#">Articles</a></li>
+							<li><a href="#">Reviews</a></li>
+							<li><a href="#">Downloads</a></li>
+							<li><a href="#">Information</a></li>
+							<li><a href="#">Advertise</a></li>
+							<li><a href="#">Resources</a></li>
+							<li><a href="#">Forums</a></li>
+							<li><a href="#">Contact</a></li>
+						</ul></td>
+				</tr>
+			</table>
+			<table width="1058" border="0" align="center" cellpadding="0" cellspacing="0">
+				<tr>
+					<td id="bar"><div class="container">
+							<div id="login">
+								<form method="post" action="">
+									<fieldset>
+									<span class="input-text">
+									<input type="text" name="usernamer" value="" />
+									</span> <span class="input-text">
+									<input type="password" name="password" value="" />
+									</span>
+									<input type="submit" value="Login" class="input-submit" />
+									<p><a href="#">Forgot password?</a> | <a href="#">Register</a></p>
+									</fieldset>
+								</form>
+							</div>
+							<div id="search">
+								<form method="get" action="">
+									<fieldset>
+									<span class="input-text">
+									<input type="text" name="query" value="" />
+									</span>
+									<input type="submit" value="Search" class="input-submit" />
+									</fieldset>
+								</form>
+							</div>
+						</div></td>
+				</tr>
+			</table>
+			<table width="1058" border="0" align="center" cellpadding="0" cellspacing="0" id="bg3">
+				<tr>
+					<td id="bg4"><div id="page" class="container">
+							<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr valign="top">
+									<td><div id="sidebar">
+											<table width="100%" border="0" cellpadding="0" cellspacing="0" id="box6">
+												<tr>
+													<td class="box-style2"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+															<tr>
+																<td><h2 class="title">Veroeros Dolor</h2></td>
+															</tr>
+															<tr>
+																<td class="entry"><ul class="list1">
+																		<li><a href="#">Donec venenatis</a></li>
+																		<li><a href="#">Quam porttitor</a></li>
+																		<li><a href="#">Nullam cursus nunc</a></li>
+																		<li><a href="#">Sapien adipiscing</a></li>
+																		<li><a href="#">Nec tempor nulla</a></li>
+																		<li><a href="#">Mauris posuere</a></li>
+																		<li><a href="#">Commodo vestibulum</a></li>
+																		<li><a href="#">Mi nec lobortis</a></li>
+																		<li><a href="#">Sit amet duis orci</a></li>
+																		<li><a href="#">Lorem condimentum</a></li>
+																	</ul></td>
+															</tr>
+														</table></td>
+												</tr>
+											</table>
+											<table width="100%" border="0" cellpadding="0" cellspacing="0" id="box7">
+												<tr>
+													<td class="box-style2"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+															<tr>
+																<td><h2 class="title">Veroeros Dolor</h2></td>
+															</tr>
+															<tr>
+																<td class="entry"><ul class="list1">
+																		<li><a href="#">Donec venenatis</a></li>
+																		<li><a href="#">Quam porttitor</a></li>
+																		<li><a href="#">Nullam cursus nunc</a></li>
+																		<li><a href="#">Sapien adipiscing</a></li>
+																		<li><a href="#">Nec tempor nulla</a></li>
+																		<li><a href="#">Mauris posuere</a></li>
+																		<li><a href="#">Commodo vestibulum</a></li>
+																		<li><a href="#">Mi nec lobortis</a></li>
+																		<li><a href="#">Sit amet duis orci</a></li>
+																		<li><a href="#">Lorem condimentum</a></li>
+																	</ul></td>
+															</tr>
+														</table></td>
+												</tr>
+											</table>
+											<table width="100%" border="0" cellpadding="0" cellspacing="0" id="box8">
+												<tr>
+													<td class="box-style2"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+															<tr>
+																<td><h2 class="title">Veroeros Dolor</h2></td>
+															</tr>
+															<tr>
+																<td class="entry"><ul class="list1">
+																		<li><a href="#">Donec venenatis</a></li>
+																		<li><a href="#">Quam porttitor</a></li>
+																		<li><a href="#">Nullam cursus nunc</a></li>
+																		<li><a href="#">Sapien adipiscing</a></li>
+																		<li><a href="#">Nec tempor nulla</a></li>
+																		<li><a href="#">Mauris posuere</a></li>
+																		<li><a href="#">Commodo vestibulum</a></li>
+																		<li><a href="#">Mi nec lobortis</a></li>
+																	</ul></td>
+															</tr>
+														</table></td>
+												</tr>
+											</table>
+										</div></td>
+									<td width="1"><img src="images/spacer.gif" alt="" width="1" height="100" /></td>
+									<td id="content"><table width="100%" border="0" cellpadding="0" cellspacing="0" id="box1">
+											<tr>
+												<td class="box-style1"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+														<tr>
+															<td><h2 class="title">Veroeros Dolor</h2></td>
+														</tr>
+														<tr>
+															<td class="entry"><a href="#"><img src="images/homepage05.jpg" alt="" width="718" height="242" /></a></td>
+														</tr>
+													</table></td>
+											</tr>
+										</table>
+										<table width="100%" border="0" cellspacing="0" cellpadding="0">
+											<tr valign="top">
+												<td id="sidebar2"><table width="100%" border="0" cellpadding="0" cellspacing="0" id="box2">
+														<tr>
+															<td class="box-style3"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+																	<tr>
+																		<td><h2 class="title">Veroeros Dolor</h2></td>
+																	</tr>
+																	<tr>
+																		<td class="entry"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+																				<tr valign="top">
+																					<td class="column1"><p><img src="images/homepage06.jpg" alt="" width="232" height="72" class="border" /></p>
+																						<p><strong>Lorem ipsum dolor sit amet</strong> consectetuer adipiscing elit. Pellentesque tincidunt auctor mauris. Duis magna are velit. <a href="#">More&hellip;</a></p></td>
+																					<td>&nbsp;</td>
+																					<td class="column2"><p><img src="images/homepage07.jpg" alt="" width="232" height="72" class="border" /></p>
+																						<p><strong>Blandit sit amet veroeros</strong> consectetuer adipiscing elit. Pellentesque tincidunt auctor mauris. Duis magna nam mi velit.. <a href="#">More&hellip;</a></p></td>
+																				</tr>
+																			</table></td>
+																	</tr>
+																</table></td>
+														</tr>
+													</table>
+													<table width="100%" border="0" cellpadding="0" cellspacing="0" id="box3">
+														<tr>
+															<td class="box-style3"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+																	<tr>
+																		<td><h2 class="title">Veroeros Dolor</h2></td>
+																	</tr>
+																	<tr>
+																		<td><div class="entry"><img src="images/homepage08.jpg" alt="" width="72" height="72" class="alignleft border" />
+																				<h3>Ipsum tempus aliquam dolor</h3>
+																				<p class="byline">Posted by <a href="#">Someone</a> on December 17, 2008</p>
+																				<p>Consectetuer adipiscing elit. Pellentesque tincidunt auctor mauris. Duis are Nam mi velit. Volutpat sed lorem ipsum dolor sit amet. <a href="#">More&hellip;</a></p>
+																				<p style="margin: 0px;">&nbsp;</p>
+																				<img src="images/homepage09.jpg" alt="" width="72" height="72" class="alignleft border" />
+																				<h3>Velit auctor pellentesque</h3>
+																				<p class="byline">Posted by <a href="#">Someone</a> on December 17, 2008</p>
+																				<p>Lorem ipsum dolor sit amet consectetuer adipiscing elit. Pellentesque tincidunt auctor mauris. Duis are Nam mi velit. Lorem et ipsum dolor. <a href="#">More&hellip;</a></p>
+																				<p style="margin: 0px;">&nbsp;</p>
+																				<img src="images/homepage10.jpg" alt="" width="72" height="72" class="alignleft border" />
+																				<h3>Mauris sed tempus volutpat etiam</h3>
+																				<p class="byline">Posted by <a href="#">Someone</a> on December 17, 2008</p>
+																				<p>Pellentesque tincidunt auctor mauris. Duis are Nam mi velit. Lorem et ipsum dolor. Consectetuer adipiscing elit. <a href="#">More&hellip;</a></p>
+																			</div></td>
+																	</tr>
+																</table></td>
+														</tr>
+													</table></td>
+												<td><div id="sidebar3">
+													<table width="100%" border="0" cellpadding="0" cellspacing="0" id="box4">
+														<tr>
+															<td class="box-style4"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+																	<tr>
+																		<td><h2 class="title">Veroeros Dolor</h2></td>
+																	</tr>
+																	<tr>
+																		<td class="entry"><ul class="list1">
+																				<li><a href="#">Donec venenatis</a></li>
+																				<li><a href="#">Quam porttitor</a></li>
+																				<li><a href="#">Nullam cursus nunc</a></li>
+																				<li><a href="#">Sapien adipiscing</a></li>
+																				<li><a href="#">Nec tempor nulla</a></li>
+																				<li><a href="#">Mauris posuere</a></li>
+																				<li><a href="#">Commodo vestibulum</a></li>
+																				<li><a href="#">Mi nec lobortis</a></li>
+																				<li><a href="#">Sit amet duis orci</a></li>
+																				<li><a href="#">Lorem condimentum</a></li>
+																			</ul></td>
+																	</tr>
+																</table></td>
+														</tr>
+													</table>
+													<table width="100%" border="0" cellpadding="0" cellspacing="0" id="box5">
+														<tr>
+															<td class="box-style4"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+																	<tr>
+																		<td><h2 class="title">Veroeros Dolor</h2></td>
+																	</tr>
+																	<tr>
+																		<td class="entry"><ul class="list1">
+																			<li><a href="#">Donec venenatis</a></li>
+																			<li><a href="#">Quam porttitor</a></li>
+																			<li><a href="#">Nullam cursus nunc</a></li>
+																			<li><a href="#">Sapien adipiscing</a></li>
+																			<li><a href="#">Nec tempor nulla</a></li>
+																			<li><a href="#">Mauris posuere</a></li>
+																			<li><a href="#">Commodo vestibulum</a></li>
+																			<li><a href="#">Mi nec lobortis</a></li>
+																			<li><a href="#">Sit amet duis orci</a></li>
+																			<li><a href="#">Lorem condimentum</a></li>
+																		</ul></td>
+																	</tr>
+																</table></td>
+														</tr>
+													</table></div></td>
+											</tr>
+										</table></td>
+								</tr>
+							</table>
+						</div></td>
+				</tr>
+			</table></td>
+	</tr>
+</table>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+	<tr>
+		<td valign="top" id="footer"><p class="container">Copyright (c) 2008 GamingSite. All rights reserved.</p></td>
+	</tr>
+</table>
+<table width="1058" border="0" align="center" cellpadding="0" cellspacing="0">
+	<tr>
+		<td>&nbsp;</td>
+	</tr>
+</table>
+</body>
 </html>
+
